@@ -43,7 +43,6 @@ const EnvironmentList = ({ collection, isModified, setIsModified }) => {
   }, [environments]);
 
   useEffect(() => {
-    // check env add
     if (prevEnvUids?.length && envUids.length > prevEnvUids.length) {
       const newEnv = environments.find((env) => !prevEnvUids.includes(env.uid));
       if (newEnv) {
@@ -51,7 +50,6 @@ const EnvironmentList = ({ collection, isModified, setIsModified }) => {
       }
     }
 
-    // check env delete
     if (prevEnvUids?.length && envUids.length < prevEnvUids.length) {
       setSelectedEnvironment(environments?.length ? environments[0] : null);
     }
