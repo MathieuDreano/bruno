@@ -46,8 +46,6 @@ const EnvironmentSettings = ({ collection, onClose }) => {
   const { environments } = collection;
   const [isModified, setIsModified] = useState(false);
   const [tab, setTab] = useState('default');
-  const [openCreateModal, setOpenCreateModal] = useState(false);
-  const [openImportModal, setOpenImportModal] = useState(false);
   if (!environments?.length) {
     return (
       <StyledWrapper>
